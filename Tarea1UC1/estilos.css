@@ -1,0 +1,36 @@
+:root {
+    /* Paleta de colores para tu portafolio */
+    --color-principal: #0056b3;
+    --color-secundario: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sección Hero con Flexbox */
+.hero-section {
+    height: 100vh;
+    /* Fondo degradado oscuro para que el texto blanco resalte */
+    background: linear-gradient(rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.9)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;
+}
+
+/* Efectos de tarjetas de proyectos (Mobile First - se aplica a todos los tamaños) */
+.tarjeta-proyecto {
+    border: none;
+    border-bottom: 5px solid var(--color-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Ajustes menores para padding extra en móviles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 80px;
+    }
+}
